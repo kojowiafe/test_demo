@@ -54,6 +54,7 @@ public class TemperatureConverter {
                 if (convertedTemp >= 99.1 && convertedTemp <= 100.4) {
                     System.out.println("You have converted Celsius to Fahrenheit.");
                 }
+
             } else {
                 // Fahrenheit to Celsius conversion
                 System.out.println("-----Fahrenheit to Celcius-----");
