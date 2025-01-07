@@ -1,35 +1,43 @@
-<!-- {% extends 'layout.html'%}
-
-{% block body%}
-<h1>Register for eventus</h1>
-<form action="/register" method="post">
-    <input type="text" name="name" placeholder="Name">
-    <select name="dorm">
-        <option disabled selected value="">Dorm</option>
-        <option value="Apley Court">Apley Court</option>
-        <option value="Canaday">Canaday</option>
-    </select>
-    <input type="submit" value="Register">
-</form>
-{% endblock %} -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>index</title>
 </head>
 <body>
-    <h1>Register for eventus</h1>
-<form action="/register" method="post">
-    <input type="text" name="name" placeholder="Name">
-    <select name="dorm">
-        <option disabled selected value="">Dorm</option>
-        <option value="Apley Court">Apley Court</option>
-        <option value="Canaday">Canaday</option>
-    </select>
-    <input type="submit" value="Register">
-</form>
+    <h1>Register</h1>
+    <form action="/register" method="post">
+        <input autocomplete="off" autofocus name="name" type="text" name="name" placeholder="Name">
+        <!-- <input type="email" name="email" placeholder="Email"> -->
+        <select name="dorm">
+            <option disabled selected value="">Dorm</option>
+            <option value="Apley Court">Apley Court</option>
+            <option value="Canaday">Canaday</option>
+            <option value="Grays">Grays</option>
+            <option value="Greenough">Greenough</option>
+            <option value="Hollis">Hollis</option>
+            <option value="Holworthy">Holworthy</option>
+            <option value="Huribut">Huribut</option>
+            <option value="Lionel">Lionel</option>
+            <option value="Matthews">Matthews</option>
+        </select>
+        <input type="submit" value="Register">
+    </form>
+
+    <script>
+        
+        document.querySelector('form').onsubmit = function() {
+            if (!document.querySelector('input').value) {
+                alert('You must provide your name!');
+                return false;
+            }
+            else if (!document.querySelector('select').value) {
+                alert('You must provide your dorm');
+                return false;
+            }
+            return true;
+        };
+    </script>
 </body>
 </html>
